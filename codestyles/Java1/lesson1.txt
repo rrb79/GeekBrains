@@ -1,0 +1,81 @@
+public class lesson1 {
+   //task1
+    public static void main(String[] args) {
+        //task2(a)
+        byte a;
+        short b;
+        int c;
+        long d;
+        float ef;
+        double f;
+        boolean g;
+        char k;
+
+        //task2(b)
+        a=12;
+        b=12345;
+        c=1234567890;
+        d=1234567890123456789L;
+        ef=123.02f;
+        f= 1.123456789;
+        g=true;
+        k='r';
+
+        System.out.println(getAnExpression(2,3,4,5));//task3
+        System.out.println(checkTheSum(15,5));//task4
+        checkPositiveOrNegative(52);//task5
+        System.out.println(testNegative(-8));
+        helloName("Рустем");//task7
+        leapYearOrNot(3600);//task8
+        //task8 year from the 18th to the 20th century
+        for (int i = 1800; i < 2001; i++) {
+            leapYearOrNot(i);
+        }
+    }
+
+    //task3
+    public static int getAnExpression(int a, int b, int c, int d){
+      return a*(b+(c/d));
+    }
+
+    //task4
+    public static boolean checkTheSum(int x1, int x2){
+       int sum=x1+x2;
+       if (sum>10 && sum<=20){
+           return true;
+       } else {
+           return false;
+       }
+    }
+
+    //task5
+    public static void checkPositiveOrNegative(int x3) {
+        if (x3<0){
+            System.out.println("The number "+x3+" is negative");
+        } else {
+            System.out.println("The number "+x3+" is positive");
+        }
+    }
+
+    //task6
+    public static boolean testNegative(int x4){
+        if (x4<0){
+            return true;
+        }
+        return false;
+    }
+
+    //task7
+    public static void helloName(String name){
+        System.out.println("\"Привет, "+name+"!\"");
+    }
+
+    //task8
+    public static void leapYearOrNot(int year){
+        if (year%400==0 || (year%4==0 && year%100!=0)){
+            System.out.println(year+" is a leap year");
+        } else {
+            System.out.println(year+" is not a leap year");
+        }
+    }
+}
